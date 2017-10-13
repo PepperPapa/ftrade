@@ -2,5 +2,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def index(request):
-    return HttpResponse("Welcome Goods index page!")
+def Product(request):
+    return HttpResponse("Welcome Goods products page!")
