@@ -1,0 +1,15 @@
+{% extends "base.html" %} 
+{% block title %}眼镜框{% endblock %} 
+{% block content %} 
+    {% if all_goods_list %}
+    <ul>
+        {% for offer in all_goods_list %}
+        <li>
+            <a href="/goods/{{ offer.id }}/">{{ offer.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No goods are available.</p>
+    {% endif %} 
+{% endblock %}

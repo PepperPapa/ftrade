@@ -1,0 +1,9 @@
+{% extends "base.html" %} 
+{% block title %}眼镜框{% endblock %} 
+{% block content %} 
+    <h1>{{ offer.name }}</h1>
+    <ul>
+        <li>{{ category }}</li>
+        <li>{{ offer.pub_date }}</li>
+    </ul>
+{% endblock %}
