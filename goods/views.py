@@ -6,6 +6,9 @@ def index(request):
     all_goods_list = Goods.objects.order_by("-pub_date")
     context = {
         'all_goods_list': all_goods_list,
+        'recommend_goods_1': all_goods_list[0],
+        'recommend_goods_2': all_goods_list[1],
+        'recommend_goods_3': all_goods_list[2],
     }
     return render(request, 'goods/index.html', context)
 
