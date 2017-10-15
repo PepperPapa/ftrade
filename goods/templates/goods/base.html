@@ -22,11 +22,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                {% comment %} <li class="nav-item active">
                     <a class="nav-link" href="#">Home
                         <span class="sr-only">(current)</span>
                     </a>
-                </li>
+                </li> {% endcomment %}
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
@@ -57,6 +57,7 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
+    {% block javascript %}{% endblock %}
 </body>
 
 </html>

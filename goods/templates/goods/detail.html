@@ -1,9 +1,66 @@
 {% extends "goods/base.html" %} 
 {% block title %} {{ offer.name }} {% endblock %} 
+
+{% block stylesheet %}
+    {% load static %}
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'goods/goods.css' %}">
+{% endblock %}
+
 {% block content %} 
-    <h1>{{ offer.name }}</h1>
-    <ul>
-        <li>{{ category }}</li>
-        <li>{{ offer.pub_date }}</li>
-    </ul>
+    <div class="card offer-summary">
+        {% comment %} <div class="card-header">
+            {{ category }}
+        </div> {% endcomment %}
+        <div class="card-body">
+            <h4 class="card-title">{{ offer.name }}</h4>
+            <p class="card-text">{{ offer.pub_date }}</p>
+            {% comment %} <a href="#" class="btn btn-primary">Go somewhere</a> {% endcomment %}
+        </div>
+    </div>
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    </div>
+    </div>
+
+    <hr class="featurette-divider">
+                                             
+    <!-- /END THE FEATURETTES -->
+{% endblock %}
+
+{% block javascript %}
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="{% static 'goods/holder.min.js' %}"></script>   
 {% endblock %}
