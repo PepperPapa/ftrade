@@ -37,9 +37,27 @@ class Goods(models.Model):
     detailIMG10	详情展示图片10（保存路径）
     """
     name = models.CharField(max_length=200)
+    description = models.TextField(default="")
     pub_date = models.DateTimeField('publish date')
     # TIP: Category定义必须在前面，否则包Category未定义
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    recommended = models.BooleanField(default=0)
+    thumbnail1 = models.ImageField(upload_to='upload')
+    thumbnail2 = models.CharField(max_length=800, default="", blank=True)
+    thumbnail3 = models.CharField(max_length=800, default="", blank=True)
+    thumbnail4 = models.CharField(max_length=800, default="", blank=True)
+    thumbnail5 = models.CharField(max_length=800, default="", blank=True)
+    carouselIMG = models.CharField(max_length=800, default="", blank=True)
+    detailIMG1 = models.CharField(max_length=800, default="", blank=True)
+    detailIMG2 = models.CharField(max_length=800, default="", blank=True)
+    detailIMG3 = models.CharField(max_length=800, default="", blank=True)
+    detailIMG4 = models.CharField(max_length=800, default="", blank=True)
+    detailIMG5 = models.CharField(max_length=800, default="", blank=True)
+    detailIMG6 = models.CharField(max_length=800, default="", blank=True)
+    detailIMG7 = models.CharField(max_length=800, default="", blank=True)
+    detailIMG8 = models.CharField(max_length=800, default="", blank=True)
+    detailIMG9 = models.CharField(max_length=800, default="", blank=True)
+    detailIMG10 = models.CharField(max_length=800, default="", blank=True)
 
     def __str__(self):
         return self.name
