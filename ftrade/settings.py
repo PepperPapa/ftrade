@@ -123,5 +123,6 @@ STATIC_URL = '/static/'
 
 # 上传文件(如图片)根目录, 文件将被上传至ftrade\goods\upload目录下
 MEDIA_ROOT = BASE_DIR + '/goods/'
-# 给上传文件赋予权限，否则前端查看图片会失败
-MEDIA_URL = MEDIA_ROOT
+# TODO(zx): 上线部署时需更换为域名方式
+MEDIA_URL = "http://127.0.0.1:8000/"
+IMAGE_PREFIX = "upload"
