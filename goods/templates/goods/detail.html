@@ -9,12 +9,12 @@
 
 {% block content %} 
     <div class="card offer-summary">
-        {% comment %} <div class="card-header">
-            {{ category }}
-        </div> {% endcomment %}
+        <div class="card-header">
+            {{ offer.name }}
+        </div>
         <div class="card-body">
-            <h4 class="card-title">{{ offer.name }}</h4>
-            <p class="card-text">{{ offer.pub_date }}</p>
+            <h4 class="card-title">{{ offer.description }}</h4>
+            <p class="card-text">{{ category }}</p>
             {% comment %} <a href="#" class="btn btn-primary">Go somewhere</a> {% endcomment %}
         </div>
     </div>
@@ -27,7 +27,7 @@
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
     </div>
     <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        <img class="featurette-image img-fluid mx-auto" src="{{ offer.detailIMG1.url }}" alt="Generic placeholder image">
     </div>
     </div>
 
@@ -39,7 +39,7 @@
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
     </div>
     <div class="col-md-5 order-md-1">
-        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        <img class="featurette-image img-fluid mx-auto" src="{{ offer.detailIMG2.url }}" alt="Generic placeholder image">
     </div>
     </div>
 
@@ -51,7 +51,7 @@
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
     </div>
     <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        <img class="featurette-image img-fluid mx-auto" src="{{ offer.detailIMG3.url }}" alt="Generic placeholder image">
     </div>
     </div>
 

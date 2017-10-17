@@ -1,5 +1,3 @@
 __pycache__
 .vscode/
-upload/*.jpg
-upload/*.gif
-upload/*.png
+upload/
